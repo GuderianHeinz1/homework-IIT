@@ -1,0 +1,37 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, nav, footer, main, aside {
+    border: 1px solid #333; /* Рамка для видимости границ */
+    padding: 10px;
+    margin: 5px;
+}
+
+header {
+    background-color: #f0f0f0; /* Цвет фона */
+}
+
+nav {
+    background-color: #e0e0ff;
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    flex: 3; 
+    background-color: #fff0f0;
+}
+
+aside {
+    flex: 1; 
+    background-color: #ffffcc;
+}
+
+footer {
+    background-color: #333;
+    color: white; /* Цвет текста */
+}

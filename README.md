@@ -5,8 +5,8 @@
 ## Запуск
 
 ```bash
-docker pull ТВОЙ_ЛОГИН/homework-iit
-docker run -p 8080:80 ТВОЙ_ЛОГИН/homework-iit
+docker pull GuderianHeinz1/homework-iit
+docker run -p 8080:80 GuderianHeinz1/homework-iit
 ```
 
 Открой http://localhost:8080

@@ -1,0 +1,23 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Получение кода из репозитория
+      - uses: actions/checkout@v5
+
+      # Проверка, что образ собирается, прежде чем отдавать его на деплой
+      - name: Build Docker image
+        run: docker build -t homework-iit .
+
+      # Запуск нового деплоя на Render через Deploy Hook
+      - name: Trigger Render deploy
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: curl -fsS -X POST "$RENDER_DEPLOY_HOOK_URL"

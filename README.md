@@ -1,5 +1,9 @@
 # homework-IIT
 
+Развёрнутое приложение: https://homework-iit-latest.onrender.com/
+
+Каждый push в ветку master запускает GitHub Actions: образ собирается, затем через Deploy Hook запускается новый деплой на Render (.github/workflows/deploy.yml).
+
 Статический HTML/CSS сайт, докеризованный с помощью nginx.
 
 ## Запуск
